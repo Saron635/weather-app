@@ -14,7 +14,8 @@ if (form) {
 let target = "Addis Ababa";
 
 const fetchResult = async (targetLocation) => {
-    let url = `http://api.weatherapi.com/v1/current.json?key=e4a8b93189b34f1787f93810251102&q=${targetLocation}&aqi=no`;
+    let apiKey = process.env.REACT_APP_WEATHER_API_KEY;  
+    let url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${targetLocation}&aqi=no`;
 
     try {
         const res = await fetch(url);
