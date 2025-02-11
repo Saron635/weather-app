@@ -1,0 +1,117 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container styling */
+.container {
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(to bottom, maroon, #8b0000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Weather container styling */
+.weather_container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.temp {
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.time_location {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.condition {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Navigation bar styling */
+nav {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+nav form {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search_area {
+    padding: 12px 15px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 50px;
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+}
+
+.search_area:focus {
+    width: 300px;
+    border: 2px solid maroon;
+}
+
+nav form button {
+    padding: 10px 20px;
+    background-color: maroon;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 8px;
+}
+
+nav form button:hover {
+    background-color: #b22222;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .search_area {
+        width: 200px;
+    }
+    .search_area:focus {
+        width: 230px;
+    }
+    .weather_container {
+        padding: 15px 30px;
+    }
+    .temp {
+        font-size: 3rem;
+    }
+    .time_location {
+        font-size: 1.2rem;
+    }
+    .condition {
+        font-size: 1rem;
+    }
+}
